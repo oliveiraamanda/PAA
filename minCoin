@@ -1,0 +1,46 @@
+public class minCoin {
+
+    public static void main(String[] args) {
+
+        int[] moedas = {10, 25, 50};
+        int valor = 75;
+
+        System.out.println(minCoin(moedas, valor));
+
+    }
+
+    static double minimo(double a, double b) {
+        if (a <= b) {
+            return a;
+        }
+        return b;
+    }
+
+    public static int minCoin(int[] moedas, int valor) {
+
+        int[] mem = new int[valor + 1];
+
+        for (int i = 1; i <= valor; i++) {
+
+            int minMoedas = valor + 1;
+
+            for ( int moeda : moedas) {
+
+                int sobra = i - moeda;
+
+                if (sobra < 0) {
+                    continue;
+                }
+
+                minMoedas = (int)minimo(minMoedas, mem[sobra] + 1);
+
+            }
+
+            mem[i] = minMoedas;
+
+        }
+
+        return mem[valor] == valor + 1 ? -1 : mem[valor];
+
+    }
+}
