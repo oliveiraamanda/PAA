@@ -6,7 +6,7 @@ public class NRainhas {
         Rainha.ResolveNRainhas();
     }
 
-    static final int variaveis = 1;
+    static final int variaveis = 5;
 
     static void printaSolucao(int tabuleiro[][]) {
         for (int i = 0; i < variaveis; i++) {
