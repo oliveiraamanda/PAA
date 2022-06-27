@@ -63,8 +63,6 @@ public class ManipulaMatrizes {
 
         return q1 || q2 || q3 || q4;
 
-        // Operação básica é "chamada" - faz 4 chamadas
-        // 4C(n/4) + 2     C(1) = 2  Para cada chamada faz duas comparações Se for uma matriz quadrada é n ao quadradoo custo, se não, é O(mxn)
     }
 }
 
